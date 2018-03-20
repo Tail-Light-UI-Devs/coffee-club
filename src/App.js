@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
 import UploadForm from './components/UploadForm';
 
 const Home = () => (
@@ -9,7 +10,7 @@ const Home = () => (
 );
 
 const App = () => (
-  <Router>
+  <Router history={createHistory({ basename: process.env.PUBLIC_URL })}>
     <div>
       <Route exact path="/" component={Home} />
       <Route path="/yer-a-wizard-harry" component={UploadForm} />
