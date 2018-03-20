@@ -4,7 +4,7 @@ import UploadForm from './components/UploadForm';
 
 const Home = () => (
   <div>
-    <h2>UI Devs Coffee Club!</h2>
+    <h2>UI Devs Coffee Club! ☕️</h2>
   </div>
 );
 
