@@ -11,12 +11,15 @@ const Home = () => (
 
 const App = () => (
   <Router history={createHistory({ basename: process.env.PUBLIC_URL })}>
-    <ul>
-      <li>
-        <Link to="/yer-a-wizard-harry" />Add coffee
-      </li>
-    </ul>
     <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/yer-a-wizard-harry">Add coffee</Link>
+        </li>
+      </ul>
       <Route exact path="/" component={Home} />
       <Route path="/yer-a-wizard-harry" component={UploadForm} />
     </div>
