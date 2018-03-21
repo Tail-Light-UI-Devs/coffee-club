@@ -18,11 +18,11 @@ export default withFormik({
     const data = { title, description, boughtLocation, flavor, rating };
 
     fetch(url, {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      })
+      body: data,
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: 'POST'
     })
       .then(() => {
         alert('Successfully added coffee!');
