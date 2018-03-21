@@ -15,14 +15,15 @@ const UploadForm = () => (
 export default withFormik({
   handleSubmit({ title, description, boughtLocation, flavor, rating }) {
     const url = 'https://ui-coffee-club-api.herokuapp.com/api/create-coffee';
-    const data = {title, description, boughtLocation, flavor, rating}
-    
+    const data = { title, description, boughtLocation, flavor, rating };
+
     fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(data), 
-        headers: new Headers({
-          'Content-Type': 'application/json'
-        })
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    })
       .then(() => {
         alert('Successfully added coffee!');
       })
