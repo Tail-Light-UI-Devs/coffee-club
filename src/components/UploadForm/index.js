@@ -16,17 +16,17 @@ export default withFormik({
   handleSubmit({ title, description, boughtLocation, flavor, rating }) {
     const url = 'https://ui-coffee-club-api.herokuapp.com/api/create-coffee';
     const data = {
-      title,
-      description,
-      boughtLocation,
-      flavor,
-      rating: parseInt(rating, 10)
+      title: title.trim(),
+      description: description.trim(),
+      boughtLocation: boughtLocation.trim(),
+      flavor: flavor.trim(),
+      rating: rating.trim()
     };
 
     fetch(url, {
-      body: data,
+      body: JSON.stringify(data),
       headers: {
-        'content-type': 'application/x-www-form-urlencoded'
+        'content-type': 'application/json'
       },
       method: 'POST'
     })
