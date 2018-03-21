@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route } from 'react-router-dom';
+import { Router, Route, Link } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import UploadForm from './components/UploadForm';
 
@@ -11,6 +11,11 @@ const Home = () => (
 
 const App = () => (
   <Router history={createHistory({ basename: process.env.PUBLIC_URL })}>
+    <ul>
+      <li>
+        <Link to="/yer-a-wizard-harry" />Add coffee
+      </li>
+    </ul>
     <div>
       <Route exact path="/" component={Home} />
       <Route path="/yer-a-wizard-harry" component={UploadForm} />
