@@ -8,7 +8,7 @@ const UploadForm = () => (
     <Field type="text" name="boughtLocation" placeholder="Bought Location" />
     <Field type="text" name="flavor" placeholder="Flavor" />
     <Field type="text" name="rating" placeholder="Rating" />
-    <button>Submit Coffee!</button>
+    <button>Submit New Coffee</button>
   </Form>
 );
 
